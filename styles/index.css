@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@500;700&display=swap');
+
+*{
+  margin: 0;
+  font-family: 'Chakra Petch';
+  text-align: center;
+  color: #fff;
+}
+html {
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+body {
+  font-size: 1em;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/img.png");
+  box-shadow: 20px 51px 641px 84px black inset;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.size {
+  position: relative;
+  z-index: 10;
+  /*width: 897px;*/
+  margin: 0 auto;
+}
+.header {
+  height: 236px;
+  padding-top: 102px;
+}
+
+.header-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.content-main {
+  position: relative;
+  height: calc(100vh - 488px);
+  min-height: 225px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 100%;
+}
+
+.content-title {
+  line-height: 95%;
+  font-weight: 600;
+  font-size: 64px;
+  text-transform: capitalize;
+}
+
+.content-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 526px;
+  margin:auto;
+  margin-top: 55px;
+}
+
+.content-input {
+  font-family: 'Inter';
+  font-size: 16px;
+  padding-left: 14px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid #FFFFFF;
+  width: 350px;
+  height: 44px;
+  outline: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 110px;
+  padding-top: 40px;
+}
+
+.footer img {
+  height: 33px;
+  cursor: pointer;
+}
+
+.ml-28 {
+  margin-left: 28px;
+}
+
+.content-btn {
+  display: inline-block;
+  position: relative;
+  margin-left: 24px;
+  width: 134px;
+  height: 48px;
+}
+.main::after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent, #0A0A0A);
+  pointer-events: none;
+}
+#trapezoidParent {
+  position: relative;
+  width: 138px;
+  border-top: 48px solid #3DB8A5;
+  border-right: 9px solid transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#trapezoidParent:hover {
+  border-top: 48px solid transparent;
+}
+#trapezoid {
+  position: absolute;
+  top: -47px;
+  left: 2px;
+  border-top: 46px solid #000000e8;
+  border-right: 8px solid transparent;
+  width: 134px;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+#trapezoidParent:hover #trapezoid {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+
+.mas {
+  position: absolute;
+  z-index: 20;
+  top: -34px;
+  left: 34px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding-top: 56px;
+  }
+  .header-logo {
+    height: 130px;
+  }
+  .header-text {
+    font-size: 18px;
+  }
+  .content-main {
+    height: calc(100vh - 442px);
+    min-height: 189px;
+  }
+  .content-title {
+    text-transform: initial;
+    font-size: 24px;
+  }
+  .content-form {
+    display: block;
+    width: 360px;
+    margin-top: 30px;
+  }
+  .content-input {
+    width: 330px;
+  }
+  .content-btn {
+    width: 100%;
+    margin-top: 12px;
+    margin-left: 0;
+  }
+  #trapezoidParent {
+    margin: auto;
+  }
+}
