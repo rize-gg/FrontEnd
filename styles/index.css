@@ -18,7 +18,7 @@ body {
 .main {
   height: 100%;
   width: 100%;
-  background-image: url("../images/img.png");
+  background-image: url("../images/img.jpg");
   box-shadow: 20px 51px 641px 84px black inset;
   background-repeat: no-repeat;
   background-position: center;
@@ -198,6 +198,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .main::after {
+    background: initial;
+  }
   .header {
     padding-top: 56px;
   }
