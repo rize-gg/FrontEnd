@@ -1,9 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@500;700&display=swap');
-
+@font-face {
+  font-family: 'Axiforma';
+  src: url('../fonts/Axiforma/Axiforma-Medium.woff');
+  src: local('Axiforma Medium'), local('Axiforma-Medium'),
+  url('../fonts/Axiforma/Axiforma-Medium.woff2') format('woff2'),
+  url('../fonts/Axiforma/Axiforma-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Axiforma';
+  src: url('../fonts/Axiforma/Axiforma-Bold.woff');
+  src: local('Axiforma Bold'), local('Axiforma-Bold'),
+  url('../fonts/Axiforma/Axiforma-Bold.woff2') format('woff2'),
+  url('../fonts/Axiforma/Axiforma-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MonumentExtended';
+  src: url('../fonts/Monument/MonumentExtended-Regular.woff');
+  src: local('Monument Extended'), local('Monument-Extended'),
+  url('../fonts/Monument/MonumentExtended-Regular.woff2') format('woff2'),
+  url('../fonts/Monument/MonumentExtended-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   margin: 0;
-  font-family: 'Chakra Petch';
   text-align: center;
   color: #fff;
 }
@@ -33,7 +56,7 @@ body {
   margin: 0 auto;
 }
 .header {
-  height: 236px;
+  height: 200px;
   padding-top: 102px;
 }
 
@@ -45,7 +68,7 @@ body {
 
 .content-main {
   position: relative;
-  height: calc(100vh - 488px);
+  height: calc(100vh - 452px);
   min-height: 225px;
 }
 
@@ -58,9 +81,10 @@ body {
 }
 
 .content-title {
-  line-height: 95%;
-  font-weight: 600;
-  font-size: 64px;
+  font-family: MonumentExtended;
+  line-height: 100%;
+  font-weight: 400;
+  font-size: 54px;
   text-transform: capitalize;
 }
 
@@ -74,8 +98,9 @@ body {
 }
 
 .content-input {
-  font-family: 'Inter';
+  font-family: 'Axiforma';
   font-size: 16px;
+  font-weight: 500;
   padding-left: 14px;
   text-align: left;
   background: rgba(0, 0, 0, 0.12);
@@ -146,11 +171,13 @@ body {
 }
 
 .mas {
+  font-family: Axiforma;
   position: absolute;
   z-index: 20;
-  top: -34px;
+  top: -35px;
   left: 34px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 @-webkit-keyframes ani {
@@ -193,11 +220,12 @@ body {
     mask-position: 0 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 825px) {
   .main::after {
     background: initial;
   }
   .header {
+    height: 150px;
     padding-top: 56px;
   }
   .header-logo {
@@ -207,7 +235,7 @@ body {
     font-size: 18px;
   }
   .content-main {
-    height: calc(100vh - 442px);
+    height: calc(100vh - 356px);
     min-height: 189px;
   }
   .content-title {
